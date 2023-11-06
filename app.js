@@ -6,11 +6,11 @@ const router = require("./routes/router");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
-// Set the static path to serve static files
+mongoose.set('strictQuery', false); // Add this line
+
 const staticPath = path.join(__dirname, "public");
 app.use(express.static(staticPath));
 
-// Correct mongoose connection and set useUnifiedTopology
 mongoose.connect("mongodb+srv://om:pharate11@cluster0.nnceu.mongodb.net/your-database-name", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
