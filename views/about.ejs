@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html x-data="{colorMode: localStorage.getItem('colorMode') || localStorage.setItem('colorMode', 'light')}" x-init="$watch('colorMode', val => localStorage.setItem('colorMode', val))" x-bind:class="{'dark': colorMode === 'dark' || (colorMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth h-full overflow-y-auto">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="/css/upper.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The Play CDN is designed for development purposes only, and is not the best choice for production. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  
+    <link id="heading-font" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" media="all" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+    </style>
+  <script>
+      window.tailwind.config = {
+        "darkMode": "class",
+        "theme": {
+          "fontFamily": {
+            "heading": ["DM Sans", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "\"Segoe UI\"", "Roboto", "\"Helvetica Neue\"", "Arial", "\"Noto Sans\"", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""],
+            "body": ["DM Sans", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "\"Segoe UI\"", "Roboto", "\"Helvetica Neue\"", "Arial", "\"Noto Sans\"", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+          },
+          "extend": {
+            "borderRadius": {
+              "global": "5px"
+            },
+            "colors": {
+              "primary": {
+                "50": "#f8f5ff",
+                "100": "#eee6fe",
+                "200": "#ddcefd",
+                "300": "#c1a6fc",
+                "400": "#844df9",
+                "500": "#4d07e4",
+                "600": "#3705a3",
+                "700": "#280477",
+                "800": "#170245",
+                "900": "#0c0123",
+                "950": "#070114",
+                "DEFAULT": "#570df8"
+              },
+              "secondary": {
+                "50": "#fff5fd",
+                "100": "#ffe6f9",
+                "200": "#fecdf3",
+                "300": "#fea4e9",
+                "400": "#fd49d3",
+                "500": "#e802b3",
+                "600": "#a70280",
+                "700": "#79015d",
+                "800": "#470136",
+                "900": "#23001b",
+                "950": "#140010",
+                "DEFAULT": "#f002b8"
+              }
+            }
+          }
+        },
+        "plugins": [window.tailwind.plugin.withOptions(({
+          prefix = "ui"
+        } = {}) => {
+          return ({
+            addVariant
+          }) => {
+            for (let state of ["open", "checked", "selected", "active", "disabled"]) {
+              addVariant(`${prefix}-${state}`, [
+                `&[data-headlessui-state~="${state}"]`,
+                `:where([data-headlessui-state~="${state}"]) &`,
+              ]);
+  
+              addVariant(`${prefix}-not-${state}`, [
+                `&[data-headlessui-state]:not([data-headlessui-state~="${state}"])`,
+                `:where([data-headlessui-state]:not([data-headlessui-state~="${state}"])) &:not([data-headlessui-state])`,
+              ]);
+            }
+          };
+        }), ]
+      };
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+</head>
+
+
+
+<body x-data="{'openDialogId': ''}" x-on:keydown.escape="openDialogId=''" class='font-body antialiased h-full font-body antialiased text-[#000000] bg-[#fcfcfc] dark:text-[#ffffff] dark:bg-[#031022]'>
+    <header>
+        
+        
+        
+        <span class="nav">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li id="join"><a href="/stu_login">Student Login</a></li>
+                <li id="join"><a href="/tea_login">Teacher Login</a></li>
+                <li id="join"><a href="/adminlogin">admin Login</a></li>
+            </ul>
+
+
+    </header>
+    <main>
+      <div class="box">
+        <div class="container">
+<hr>
+  <div class="py-11">
+    <div class="text-center flex flex-col gap-y-3 px-2 sm:mx-auto sm:max-w-xl">
+  
+      <h1 class="font-bold text-8xl text-slate-900 dark:text-gray-100 sm:text-3xl">Empowering learners through innovative education.</h1>
+      <p class="text-base dark:text-gray-400 sm:text-lg">An e-learning website is a platform that provides a virtual environment for learners to access educational resources and interact with teachers and other learners. The website may offer various courses and programs in different fields, such as science, technology, engineering, mathematics, arts, and humanities.</p>
+    </div>
+    <div class="grid grid-cols-2 mt-5 gap-y-5 sm:gap-y-0 lg:mx-auto lg:max-w-4xl">
+      <div class="col-span-2 sm:col-span-1"><img class="w-full bg-gray-50" alt="No alt" src="https://images.pexels.com/photos/4144096/pexels-photo-4144096.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" /></div>
+      <div class="col-span-2 px-3 pb-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:border-t lg:border-r">
+        <h1 class="font-semibold text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">Learn. Grow. Succeed</h1>
+        <p class="text-base font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">At our e-learning website, we provide a comprehensive range of courses and programs designed to help learners of all ages and backgrounds acquire new skills, gain knowledge, and achieve their personal and professional goals. Our courses are delivered by experienced instructors using innovative teaching methods and cutting-edge technology, ensuring that our learners receive the best possible education and support.</p>
+      </div>
+      <div class="col-span-2 px-3 pb-3 order-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:order-none sm:border-b lg:border-l">
+        <h1 class="font-semibold text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">Education without boundaries</h1>
+        <p class="text-base font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">We believe that everyone should have access to quality education, regardless of their location, financial situation, or other barriers. That's why our e-learning website offers flexible, affordable, and accessible courses that can be accessed from anywhere in the world. Whether you want to learn a new skill, advance your career, or pursue a passion, we're here to help you succeed.</p>
+      </div>
+      <div class="col-span-2 order-2 sm:col-span-1 sm:order-none"><img class="w-full bg-gray-50" alt="No alt" src="https://images.pexels.com/photos/9159641/pexels-photo-9159641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" /></div>
+    </div>
+  </div>
+  
+  &nbsp;
+  <hr>
+  <div class="">
+  
+    <div class="text-center px-3 py-16 max-w-7xl mx-auto">
+      <h1 class="font-black tracking-tight text-slate-900 text-3xl dark:text-slate-100 sm:text-4xl">We work as a Team!</h1>
+     
+      <div class="grid gap-2 mt-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="text-center"><img style="height:290px;" class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt" src="/img/om.jpeg" />
+          <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Om Pharate</h1>
+          <p class="tag"><b> Backend  Developer & Leader.</b></p>
+        </div>
+        <div class="text-center"><img style="height:290px;" class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt" src="/img/tejas.jpeg" />
+          <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Tejas Rajpure</h1>
+          <p class="tag"><b> Frontend Developer.</b></p>
+        </div>
+        <div class="text-center"><img style="height:290px;" class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt" src="/img/onkar.jpg" />
+          <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Onkar Warade</h1>
+          <p class="tag"><b> Frontend Developer.</b></p>
+        </div>
+        <div class="text-center"><img  style="height:290px;" class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt" src="/img/karan.jpeg" />
+          <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Karan Mohite</h1>
+          <p class="tag"><b> Database Admin.</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+      </div>
+      </div>
+      
+    </main>
+
+</body>
+
+</html>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #2c3145;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tag{
+  color: #a774ff;
+}
+
+.section_all {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+.section-title {
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    letter-spacing: 0.4px;
+    line-height: 28px;
+    max-width: 550px;   
+}
+
+.section-title-border {
+    background-color: #000;
+    height: 13px;
+    width: 44px;
+}
+
+.section-title-border-white {
+    background-color: #fff;
+    height: 2px;
+    width: 100px;
+}
+.text_custom {
+    color: #00bd2a;
+}
+
+.about_icon i {
+    font-size: 22px;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 35px;
+    color: #00bd2a;
+    box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+}
+.about_header_main .about_heading {
+    max-width: 450px;
+    font-size: 24px;
+}
+
+.about_icon span {
+    position: relative;
+    top: -10px;
+}
+
+.about_content_box_all {
+    padding: 28px;
+}
+.container{
+   overflow: hidden;
+    width: 98vw;
+    /* background-color: #00bd2a; */
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+}
+</style>

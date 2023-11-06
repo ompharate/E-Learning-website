@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/logins">Login's</a></li>
+          <li><a href="/adminlogin">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+
+      
+      <table>
+        <tr>
+          <td><b>  Student Login</b></td>
+          <td><a style="color:blue; text-decoration: underline;" href="/stu_login"> Login Here!!</a></td>
+        </tr>
+        <tr>
+          <td><b> Teacher Login</b></td>
+          <td><a style="color:blue; text-decoration: underline;" href="/tea_login"> Login Here!!</a></td>
+        </tr>
+        <tr>
+          <td><b> Admin Login</b></td>
+          <td><a style="color:blue; text-decoration: underline;" href="/adminlogin"> Login Here!!</a></td>
+        </tr>
+      </table>
+      </div>
+      
+</body>
+</html>
+<style>
+
+
+.navbar {
+  display: flex;
+  margin-top: 0;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: blue;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+li {
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.container{
+    margin: 50px auto;
+    width: 500px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+tr{
+  background-color: white;
+}
+
+
+@media (max-width: 700px) {
+  ul {
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  li {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .navbar {
+    height: 100%;
+  }
+}
+
+</style>

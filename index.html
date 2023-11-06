@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Word Example</title>
+	<style>
+		.container {
+			width: 800px;
+			height: 600px;
+			background-color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script>
+		// Create a 3D scene
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera( 75, 800 / 600, 0.1, 1000 );
+		const renderer = new THREE.WebGLRenderer();
+		renderer.setSize( 800, 600 );
+		document.querySelector('.container').appendChild( renderer.domElement );
+
+		// Create a 3D text object
+		const loader = new THREE.FontLoader();
+		loader.load( 'https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
+			const geometry = new THREE.TextGeometry( '3D Word', {
+				font: font,
+				size: 80,
+				height: 20,
+				curveSegments: 12,
+				bevelEnabled: true,
+				bevelThickness: 10,
+				bevelSize: 8,
+				bevelOffset: 0,
+				bevelSegments: 5
+			} );
+			const material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+			const text = new THREE.Mesh( geometry, material );
+			scene.add( text );
+		} );
+
+		// Add interactivity to the 3D object
+		const animate = function () {
+			requestAnimationFrame( animate );
+			text.rotation.x += 0.01;
+			text.rotation.y += 0.01;
+			renderer.render( scene, camera );
+		};
+		animate();
+	</script>
+</body>
+</html>

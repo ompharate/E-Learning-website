@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    align-items: center;
+  
+    top: 0;
+  }
+  article {
+    display: inline-block;
+  }
+  
+  .nav ul {
+    padding-top: 4vh;
+    display: inline;
+    list-style: none;
+    display: flex;
+  }
+  .nav {
+    display: inline-block;
+    float: right;
+  }
+  header a:hover {
+    color: #288ee8;
+  }
+  .nav ul li {
+    padding: 1vw;
+    font-weight: bold;
+    font-size: 2vh;
+    border-radius: 8vw;
+  }
+  .nav ul li a {
+    box-sizing: border-box;
+    color: #7e3af2;
+    text-decoration: none;
+    justify-content: center;
+    padding: 02vh;
+  }
+  #join{
+  white-space: nowrap;
+  }
+  
+  body {
+    /* color: #ffffff; */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #050121f6; */
+    /* height: 500vh; */
+    /* background-image: -webkit-linear-gradient(#050121f6,
+    #8b7edf);; */
+  }
+  
+  main{
+    display: inline-block;
+  }
+   .image{  
+    /* display: flex; */
+    float: right;
+    align-self: flex-start;
+    padding: top 5vh;
+    
+  }
+  #mg{
+  
+  display: inline-block;
+  /* display: flex; */
+  
+  }
+  .p1 {
+    font-size: 2vh;
+    padding-left: 10vw;
+    padding-top: 15vh;
+    font-weight: bold;
+    width: 23vw;
+  }
+  
+  .p2 {
+    font-size: 6vh;
+    padding-left: 10vw;
+    padding-top: 1vh;
+    font-weight: bold;
+    display: inline-block;
+    width: 40vw;
+    box-sizing: border-box;
+  }
+  .p3 {
+    font-size: 3.5vh;
+    padding-top: 1vh;
+    padding-left: 10vw;
+    color: #288ee8;
+    font-weight: bold;
+  }
+  .p4 {
+    font-size: 1.7vh;
+  
+    padding-top: 3vh;
+    width: 45vw;
+    padding-left: 10vw;
+  }
+  .button button {
+    background-color: #7e3af2;
+    padding: 2vh;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 4vh;
+    border: #288ee8;
+    font-size: 2vh;
+  }
+  .button {
+    padding-left: 10vw;
+    padding-top: 5vh;
+  }
+  
+  .button button:hover {
+    color: #000000;
+    background-color: #288ee8;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .nav ul li a:hover {
+    color: #050121f6;
+  }
+  .nav ul li:hover {
+    background-color: #288ee8;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
