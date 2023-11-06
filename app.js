@@ -6,7 +6,7 @@ const router = require("./routes/router");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
-mongoose.set('strictQuery', false); // Add this line
+mongoose.set('strictQuery', true); // Add this line
 
 const staticPath = path.join(__dirname, "public");
 app.use(express.static(staticPath));
