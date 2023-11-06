@@ -20,8 +20,7 @@ const leaderboard = async function(req,res){
   
 }
 const home_page = async function(req,res){
-    res.render("home")
-  
+    res.render("home")  
 }
 const logout = async function(req,res){
     res.clearCookie('jwt');
